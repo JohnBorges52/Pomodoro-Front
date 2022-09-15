@@ -122,7 +122,7 @@ export const Timer = () => {
 
         {!isHappening &&
         <Slide
-        value={minute} 
+        minute={minute} 
         onChange={(e) => {
           handleChange(e.target.value)}}
           time={minute}

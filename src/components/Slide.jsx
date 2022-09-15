@@ -16,7 +16,7 @@ export const Slide = (props) => {
     <div className="selector-bar">
 
       <Slider
-      value={props.value}
+      value={props.minute}
       type="range" 
        />
       
