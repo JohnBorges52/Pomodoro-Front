@@ -15,7 +15,7 @@ export const Slide = (props) => {
     <div className='slider-container'>
     <div className='change-here'>
       <span>Slide here to change the time.</span>
-      <button onClick={()=> console.log()}> TEST</button>
+      {/* <button onClick={()=> console.log()}> TEST</button> */}
     </div>
 
     <div className="selector-bar">

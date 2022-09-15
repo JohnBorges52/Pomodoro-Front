@@ -33,11 +33,11 @@ function App() {
     if (loggedInUser) {
       const foundUser = JSON.parse(loggedInUser)
       setUser(foundUser);
-      console.log("user:", user)
+
       setUserId(foundUser.id)
-      console.log("UserId: ", userId)
+
     } else {
-      console.log("not loggedin ")
+
     }
   }, [])
 

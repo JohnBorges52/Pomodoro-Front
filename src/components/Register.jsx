@@ -36,7 +36,7 @@ useEffect(()=>{
         window.location.reload(false)
 
       } else{
-        console.log("NAO POOSTOU")
+        console.log("error")
       } 
       
     })
@@ -120,7 +120,7 @@ useEffect(()=>{
   const registerUser=() => {
         axios.post('https://pomodoro-backend.onrender.com/users/new', {
           username, email, psw
-        }).then(res => console.log(res), console.log('reactPASSWORD', psw))
+        }).then(res => console.log('worked'))
   }   
  
 
