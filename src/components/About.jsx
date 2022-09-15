@@ -30,7 +30,7 @@ export const About = () => {
 
   </div>
 
-<div className='about-creator'> *created by <span className='john'> <a href="https://github.com/JohnBorges52"> John Borges</a> *</span></div>
+<div className='about-creator'> *created by <span className='john'> <a href="https://github.com/JohnBorges52" target="_blank"> John Borges</a> *</span></div>
 </div>
 
 

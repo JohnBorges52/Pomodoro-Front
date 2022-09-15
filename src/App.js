@@ -33,11 +33,9 @@ function App() {
     if (loggedInUser) {
       const foundUser = JSON.parse(loggedInUser)
       setUser(foundUser);
-
       setUserId(foundUser.id)
-
     } else {
-
+      console.log("not loggedin ")
     }
   }, [])
 

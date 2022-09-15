@@ -36,7 +36,7 @@ export const MyProfile = (props) => {
 
   const fecthAllStickers = () => {
     axios.get("https://pomodoro-backend.onrender.com/stickers")
-    .then(res => { setAllStickers(res.data) ; console.log("allStickers:", res.data) })
+    .then(res => { setAllStickers(res.data)})
   }
    
   const myStickersId = (myStickers) => {
