@@ -50,7 +50,7 @@ function App() {
     e.preventDefault()
 
 
-    axios.post("/users/loginSuccess", { email, psw })
+    axios.post("https://pomodoro-backend.onrender.com/users/loginSuccess", { email, psw })
       .then(res => {
         if (res.data === "Wrong Password") {
           setLoginStatus("WrongPassword")

@@ -25,22 +25,17 @@ export const MyProfile = (props) => {
  
   
   const fetchNumOfPomodoros = () => {
-    axios.post("/pomodoros/mypomodoros", {userID})
+    axios.post("https://pomodoro-backend.onrender.com/pomodoros/mypomodoros", {userID})
     .then(res => {setNumberOfPomodoros(res.data[0].exact_count)})
   }
 
   useEffect(() => {
-   // fecthMyStickers();
     fecthAllStickers();
     fetchNumOfPomodoros();
   },[])
 
-  // const fecthMyStickers = () => {
-  //   axios.post("/user_stickers/mystickers", {userID})
-  //   .then((res) => (setMyStickers(res.data), console.log("myStickers", res.data)))
-  // }
   const fecthAllStickers = () => {
-    axios.get("/stickers")
+    axios.get("https://pomodoro-backend.onrender.com/stickers")
     .then(res => { setAllStickers(res.data) ; console.log("allStickers:", res.data) })
   }
    

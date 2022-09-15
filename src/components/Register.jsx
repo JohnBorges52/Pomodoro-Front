@@ -28,7 +28,7 @@ useEffect(()=>{
 
   const onSubmit=(e)=> {
     e.preventDefault(); 
-    axios.get('/users/alreadyExist', { params: {email, username}})
+    axios.get('https://pomodoro-backend.onrender.com/users/alreadyExist', { params: {email, username}})
     .then(res => {
       if( usernameValidation(res.data) === true && emailValidation(res.data) === true && pswValidation(psw, pswConfirmation) === true) {
         registerUser(res.data)
@@ -118,7 +118,7 @@ useEffect(()=>{
   }
   
   const registerUser=() => {
-        axios.post('/users/new', {
+        axios.post('https://pomodoro-backend.onrender.com/users/new', {
           username, email, psw
         }).then(res => console.log(res), console.log('reactPASSWORD', psw))
   }   

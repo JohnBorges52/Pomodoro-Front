@@ -30,7 +30,6 @@ export const ShowBreak = (props) => {
 
     
     if (minute === 0 && second === 0) {
-      console.log("ACABOU BREAK")
       clearTimeout(interval)
       playFunc(sound_two)
     }
