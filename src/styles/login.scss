@@ -1,0 +1,137 @@
+.login-form{
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+
+  .login-message{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(66, 66, 66);
+  }
+  .error-message{
+    font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: red;
+      text-align: right;
+      margin-right: 10px;
+  }
+
+
+
+  form {
+ 
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;  
+  }
+
+  label{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  input {
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    border: 1px solid rgb(139, 139, 139);
+    border-radius: 7px;
+
+  }
+  input:focus {
+    outline: none;
+    border: 2px solid rgb(116, 116, 116);
+
+  }
+
+  .login-form-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+  }
+  button{
+    margin-top: 25px;
+    margin-left: 5px;
+    width: 90px ;
+    height: 25px;
+    background-color: rgb(101, 190, 49);
+    border: 1px solid rgb(101, 190, 49);
+
+    color: white;
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(58, 158, 0);
+
+
+  }
+  .danger{
+     background-color: rgb(231, 47, 47) ;
+     border: 1px solid rgb(231, 47, 47);
+  }
+  .danger:hover {
+    background-color: rgb(201, 32, 32) ;
+
+  }
+  a{
+    margin-top:5px;
+    margin-bottom: 0;
+    color: rgb(154, 154, 250);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-align: end;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(107, 107, 245);
+
+  }
+
+}
+ .div-gif-container{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+ }
+.div-gif {
+  width: 30%;
+  height: 120px;
+  background-image: url('../assets/1621344026_300155_gif-url.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+@media (min-width: 700px) {
+  .login-form{ 
+
+    max-width: 628px ;
+
+  }
+
+}

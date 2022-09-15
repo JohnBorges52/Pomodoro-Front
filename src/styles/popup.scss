@@ -1,0 +1,86 @@
+
+.confirmation-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  height: 40%;
+  background-color: rgb(145, 145, 145);
+  border-radius: 20px;
+  position: fixed;
+  left: auto ;
+  top: 30%;
+  z-index: 2;
+
+}
+.messages-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:20px;
+  height:90%
+}
+
+.confirmation-title{
+
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  margin: 0px auto
+
+}
+.confirmation-message{
+  
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  width:80%;
+  height: auto;
+  margin: 45px auto
+}
+.popup-close-span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 4px;
+  margin-right: 4px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 50px;
+  padding: 5px 10px;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 0, 0);
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+.popup-confirmation-btn{
+  width: 70px;
+  color: rgb(121, 121, 121);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 6px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.confirmation-box-wrapper{
+  width: 100vw;
+}
+
+@media (min-width: 700px) {
+  .confirmation-box{
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 460px;
+
+
+  }
+
+
+
+}
