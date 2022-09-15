@@ -4,6 +4,7 @@ const min = 20;
 const max = 50;
 
 export const Slider = styled.input.attrs({ type: 'range', min: "20", max: "50", defaultValue: "25", step: "5" })
+
   `-webkit-appearance: none;
   -moz-appearance: none;
   outline: 0;

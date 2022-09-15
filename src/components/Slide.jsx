@@ -16,8 +16,9 @@ export const Slide = (props) => {
     <div className="selector-bar">
 
       <Slider
-      value={props.minute}
-      type="range" 
+       value={props.value}
+       onChange={props.onChange} 
+       time={props.time}
        />
       
     <span className="input-value" id="test">
