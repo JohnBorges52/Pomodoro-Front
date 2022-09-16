@@ -79,6 +79,7 @@ export const MyProfile = (props) => {
 
       </div>
         <div className="my-stickers-tittle">
+        My Stickers
 
         {/* <span>MY STICKERS</span>
         <button onClick={()=>{console.log("HERE::", mapStickersInformation(allStickers, currentSticker)}}>TEST</button> */}
