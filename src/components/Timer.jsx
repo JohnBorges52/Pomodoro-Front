@@ -138,7 +138,7 @@ export const Timer = () => {
         minutes={minute}
         seconds={second}
         class={'div-pomodoro-gif'}
-        message={"ITS GOING TO END IN"}
+        message={"IT IS GOING TO END IN"}
         timeStyle={variableStyle}
         />
         <PomodoroButtons onClick={() => (setStart(true), setIsHappening(true))} 
