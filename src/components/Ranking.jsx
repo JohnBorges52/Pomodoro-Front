@@ -40,7 +40,7 @@ export const Ranking = () => {
         Username
       </div>
      <div className="general-totaltime">Minutes</div>
-     <div className="loader-container"> </div>
+     
      </div>
         {(topUsers.map((element) => {
 
