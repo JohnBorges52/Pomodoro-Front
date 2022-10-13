@@ -16,11 +16,13 @@ export const MyProfile = (props) => {
   
   const [openDiv, setOpenDiv] = useState(false)
   const [openLockedDiv, setOpenLockedDiv] = useState(false)
+  const [loading, setLoading] = useState(true)
 
 
   const loggedinUser = localStorage.getItem("user")
   const data = JSON.parse(loggedinUser)
   const userID = data.id
+  
 
  
   
@@ -35,8 +37,10 @@ export const MyProfile = (props) => {
   },[])
 
   const fecthAllStickers = () => {
+    setLoading(true)
     axios.get("https://pomodoro-backend.onrender.com/stickers")
     .then(res => { setAllStickers(res.data)})
+    setLoading(false)
   }
    
   const myStickersId = (myStickers) => {
@@ -84,6 +88,7 @@ export const MyProfile = (props) => {
         {/* <span>MY STICKERS</span>
         <button onClick={()=>{console.log("HERE::", mapStickersInformation(allStickers, currentSticker)}}>TEST</button> */}
         </div>
+        {loading && <div className="loader-container"></div>}
         
       <div className="my-stickers-container">
 

@@ -7,14 +7,17 @@ import '../styles/ranking.scss'
 export const Ranking = () => {
   
   const [topUsers, setTopUsers] = useState([])
+  const [loading, setLoading] = useState(true);
 
 
 
 
 
   const fecthTopUsers =  () => {
+    setLoading(true)
     axios.get('https://pomodoro-backend.onrender.com/pomodoros/ranking')
-    .then(res=>{setTopUsers(res.data)
+    .then(res=>{setTopUsers(res.data);
+      setLoading(false)
     })
 
   }
@@ -37,6 +40,7 @@ export const Ranking = () => {
         Username
       </div>
      <div className="general-totaltime">Minutes</div>
+     <div className="loader-container"> </div>
      </div>
         {(topUsers.map((element) => {
 
@@ -94,6 +98,7 @@ export const Ranking = () => {
         
 
       </div>
+      {loading && <div className="loader-container"></div>}
     </div>
 
   )

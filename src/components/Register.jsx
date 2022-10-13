@@ -12,6 +12,7 @@ export const Register = (props) => {
   const [email, setEmail] = useState("")
   const [psw, setPsw] = useState("")
   const [pswConfirmation, setPswConfirmation] = useState("")
+  const [showRegistrationConfirmation, setShowRegistrationConfirmation] = useState(false)
 
 
  
@@ -32,9 +33,12 @@ useEffect(()=>{
     .then(res => {
       if( usernameValidation(res.data) === true && emailValidation(res.data) === true && pswValidation(psw, pswConfirmation) === true) {
         registerUser(res.data)
-        navigate("/login")
-        window.location.reload(false)
-
+        setShowRegistrationConfirmation(true)
+        setTimeout(()=>{
+          navigate("/login");
+          window.location.reload(false);
+        },3500)
+        
       } else{
         console.log("error")
       } 
@@ -131,6 +135,10 @@ useEffect(()=>{
       <div className="register-message">
         <span> Create an account so you can follow your progress and earn trophies  </span>
       </div>
+      {showRegistrationConfirmation && <>
+     <span className="register-confirmation-container"> Registration Successfull!</span>
+     <span className="register-confirmation-container2">You are being redirect.</span>
+      </>}
 
       <div className="register-form-inputs">
 
