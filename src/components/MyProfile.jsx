@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
-
 import "../styles/myprofile.scss"
 import { BigSticker } from "./BigSticker"
 import { BigStickerLocked } from "./BigStickerLocked"
@@ -22,8 +21,6 @@ export const MyProfile = (props) => {
   const loggedinUser = localStorage.getItem("user")
   const data = JSON.parse(loggedinUser)
   const userID = data.id
-  
-
  
   
   const fetchNumOfPomodoros = () => {
@@ -39,8 +36,8 @@ export const MyProfile = (props) => {
   const fecthAllStickers = () => {
     setLoading(true)
     axios.get("https://pomodoro-backend.onrender.com/stickers")
-    .then(res => { setAllStickers(res.data)})
-    setLoading(false)
+    .then(res => { setAllStickers(res.data); setLoading(false)})
+   
   }
    
   const myStickersId = (myStickers) => {
