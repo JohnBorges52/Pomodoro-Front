@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://pomodoro-backend.onrender.com/",
+  "proxy": "https://pomodoro-api-production.up.railway.app/",
   "eslintConfig": {
     "extends": [
       "react-app",

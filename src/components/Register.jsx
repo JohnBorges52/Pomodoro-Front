@@ -29,7 +29,7 @@ useEffect(()=>{
 
   const onSubmit=(e)=> {
     e.preventDefault(); 
-    axios.get('https://pomodoro-backend.onrender.com/users/alreadyExist', { params: {email, username}})
+    axios.get('https://pomodoro-api-production.up.railway.app/users/alreadyExist', { params: {email, username}})
     .then(res => {
       if( usernameValidation(res.data) === true && emailValidation(res.data) === true && pswValidation(psw, pswConfirmation) === true) {
         registerUser(res.data)
@@ -122,7 +122,7 @@ useEffect(()=>{
   }
   
   const registerUser=() => {
-        axios.post('https://pomodoro-backend.onrender.com/users/new', {
+        axios.post('https://pomodoro-api-production.up.railway.app/users/new', {
           username, email, psw
         }).then(res => console.log('worked'))
   }   

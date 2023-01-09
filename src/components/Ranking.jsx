@@ -15,7 +15,7 @@ export const Ranking = () => {
 
   const fecthTopUsers =  () => {
     setLoading(true)
-    axios.get('https://pomodoro-backend.onrender.com/pomodoros/ranking')
+    axios.get('https://pomodoro-api-production.up.railway.app/pomodoros/ranking')
     .then(res=>{setTopUsers(res.data);
       setLoading(false)
     })

@@ -43,7 +43,7 @@ export const Timer = () => {
 
   const sendNewPomodoro = () => {
     if (userId !== 0) {
-      axios.post("https://pomodoro-backend.onrender.com/pomodoros/newpomodoro", {userId, duration})
+      axios.post("https://pomodoro-api-production.up.railway.app/pomodoros/newpomodoro", {userId, duration})
       .then(res => res.data)
     }
   }
