@@ -24,7 +24,7 @@ export const MyProfile = (props) => {
  
   
   const fetchNumOfPomodoros = () => {
-    axios.post("https://pomodoro-backend.onrender.com/pomodoros/mypomodoros", {userID})
+    axios.post("https://pomodoro-api-production.up.railway.app/pomodoros/mypomodoros", {userID})
     .then(res => {setNumberOfPomodoros(res.data[0].exact_count)})
   }
 
@@ -35,7 +35,7 @@ export const MyProfile = (props) => {
 
   const fecthAllStickers = () => {
     setLoading(true)
-    axios.get("https://pomodoro-backend.onrender.com/stickers")
+    axios.get("https://pomodoro-api-production.up.railway.app/stickers")
     .then(res => { setAllStickers(res.data); setLoading(false)})
    
   }
