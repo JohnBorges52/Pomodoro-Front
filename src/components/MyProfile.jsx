@@ -23,7 +23,7 @@ export const MyProfile = props => {
   const fetchNumOfPomodoros = () => {
     axios
       .post(
-        'https://pomodoro-api-production.up.railway.app/pomodoros/mypomodoros',
+        'postgres://animepomosql_user:jKDK8oEkwl1Q8JibFKbMj9sLPL7716KM@dpg-ch034hrh4hstquodonlg-a.oregon-postgres.render.com/animepomosql/pomodoros/mypomodoros',
         { userID }
       )
       .then(res => {
@@ -40,7 +40,7 @@ export const MyProfile = props => {
     setLoading(true)
     axios
       .get(
-        'postgres://animepomosql_user:jKDK8oEkwl1Q8JibFKbMj9sLPL7716KM@dpg-ch034hrh4hstquodonlg-a/animepomosql/stickers'
+        'postgres://animepomosql_user:jKDK8oEkwl1Q8JibFKbMj9sLPL7716KM@dpg-ch034hrh4hstquodonlg-a.oregon-postgres.render.com/animepomosql/stickers'
       )
       .then(res => {
         setAllStickers(res.data)
