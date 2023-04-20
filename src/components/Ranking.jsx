@@ -10,9 +10,7 @@ export const Ranking = () => {
   const fecthTopUsers = () => {
     setLoading(true)
     axios
-      .get(
-        'postgres://animepomosql_user:jKDK8oEkwl1Q8JibFKbMj9sLPL7716KM@dpg-ch034hrh4hstquodonlg-a.oregon-postgres.render.com/animepomosql/ranking'
-      )
+      .get('https://pomodoro-api.onrender.com/pomodoros/ranking')
       .then(res => {
         setTopUsers(res.data)
         setLoading(false)

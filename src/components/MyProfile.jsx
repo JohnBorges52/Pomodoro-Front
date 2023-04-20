@@ -22,10 +22,9 @@ export const MyProfile = props => {
 
   const fetchNumOfPomodoros = () => {
     axios
-      .post(
-        'postgres://animepomosql_user:jKDK8oEkwl1Q8JibFKbMj9sLPL7716KM@dpg-ch034hrh4hstquodonlg-a.oregon-postgres.render.com/animepomosql/pomodoros/mypomodoros',
-        { userID }
-      )
+      .post('https://pomodoro-api.onrender.com/mypomodoros', {
+        userID
+      })
       .then(res => {
         setNumberOfPomodoros(res.data[0].exact_count)
       })
@@ -38,14 +37,10 @@ export const MyProfile = props => {
 
   const fecthAllStickers = () => {
     setLoading(true)
-    axios
-      .get(
-        'postgres://animepomosql_user:jKDK8oEkwl1Q8JibFKbMj9sLPL7716KM@dpg-ch034hrh4hstquodonlg-a.oregon-postgres.render.com/animepomosql/stickers'
-      )
-      .then(res => {
-        setAllStickers(res.data)
-        setLoading(false)
-      })
+    axios.get('https://pomodoro-api.onrender.com/stickers').then(res => {
+      setAllStickers(res.data)
+      setLoading(false)
+    })
   }
 
   const myStickersId = myStickers => {
